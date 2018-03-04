@@ -16,3 +16,5 @@ sudo apt-get update
 sudo apt-get install sublime-text
 
 
+# install midi file processor timidity
+sudo apt-get install timidity timidity-interfaces-extra
