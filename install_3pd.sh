@@ -22,3 +22,6 @@ sudo apt-get install timidity timidity-interfaces-extra
 
 # install git
 sudo apt install git
+
+# install texlive to convert tex to pdf
+sudo apt-get install texlive
