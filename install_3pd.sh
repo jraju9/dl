@@ -25,3 +25,8 @@ sudo apt install git
 
 # install texlive to convert tex to pdf
 sudo apt-get install texlive
+
+
+
+# install virtenv
+sudo apt install virtualenv
