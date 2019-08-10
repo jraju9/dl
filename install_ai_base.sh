@@ -60,6 +60,15 @@ c.NotebookApp.open_browser = False" >> $HOME/.jupyter/jupyter_notebook_config.py
 
 
 
+# clone the fast.ai course repo and prompt to start notebook
+cd ~
+git clone https://github.com/fastai/courses.git
+echo "\"jupyter notebook\" will start Jupyter on port 8888"
+echo "If you get an error instead, try restarting your session so your $PATH is updated"
+
+
+
+
 #useful links
 # https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html
 # https://github.com/fastai/courses/blob/master/setup/install-gpu.sh
@@ -69,9 +78,3 @@ c.NotebookApp.open_browser = False" >> $HOME/.jupyter/jupyter_notebook_config.py
 # https://www.osetc.com/en/how-to-install-nvidia-cudnn-on-ubuntu-16-04-18-04-linux.html
 # https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html
 # https://developer.nvidia.com/rdp/cudnn-download
-
-# clone the fast.ai course repo and prompt to start notebook
-cd ~
-git clone https://github.com/fastai/courses.git
-echo "\"jupyter notebook\" will start Jupyter on port 8888"
-echo "If you get an error instead, try restarting your session so your $PATH is updated"
