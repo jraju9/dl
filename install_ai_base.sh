@@ -58,6 +58,18 @@ echo "c.NotebookApp.password = u'"$jupass"'" >> $HOME/.jupyter/jupyter_notebook_
 echo "c.NotebookApp.ip = '*'
 c.NotebookApp.open_browser = False" >> $HOME/.jupyter/jupyter_notebook_config.py
 
+
+
+#useful links
+# https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html
+# https://github.com/fastai/courses/blob/master/setup/install-gpu.sh
+# http://wiki.fast.ai/index.php/Ubuntu_installation
+
+# https://repo.continuum.io/archive/
+# https://www.osetc.com/en/how-to-install-nvidia-cudnn-on-ubuntu-16-04-18-04-linux.html
+# https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html
+# https://developer.nvidia.com/rdp/cudnn-download
+
 # clone the fast.ai course repo and prompt to start notebook
 cd ~
 git clone https://github.com/fastai/courses.git
