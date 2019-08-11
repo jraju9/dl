@@ -21,11 +21,20 @@ nvidia-smi
 # install Anaconda for current user
 mkdir downloads
 cd downloads
-wget "https://repo.continuum.io/archive/Anaconda2-4.2.0-Linux-x86_64.sh" -O "Anaconda2-4.2.0-Linux-x86_64.sh"
-bash "Anaconda2-4.2.0-Linux-x86_64.sh" -b
+#wget "https://repo.continuum.io/archive/Anaconda2-4.2.0-Linux-x86_64.sh" -O "Anaconda2-4.2.0-Linux-x86_64.sh"
+#bash "Anaconda2-4.2.0-Linux-x86_64.sh" -b
+wget "https://repo.continuum.io/archive/Anaconda3-2019.07-Linux-x86_64.sh" -O "Anaconda3-2019.07-Linux-x86_64.sh"
+bash "Anaconda3-2019.07-Linux-x86_64.sh" -b
 
-echo "export PATH=\"$HOME/anaconda2/bin:\$PATH\"" >> ~/.bashrc
-export PATH="$HOME/anaconda2/bin:$PATH"
+
+
+
+#echo "export PATH=\"$HOME/anaconda2/bin:\$PATH\"" >> ~/.bashrc
+echo "export PATH=\"$HOME/anaconda3/bin:\$PATH\"" >> ~/.bashrc
+
+#export PATH="$HOME/anaconda2/bin:$PATH"
+export PATH="$HOME/anaconda3/bin:$PATH"
+
 conda install -y bcolz
 conda upgrade -y --all
 
@@ -49,6 +58,10 @@ echo '{
 
 # install cudnn libraries
 wget "http://files.fast.ai/files/cudnn.tgz" -O "cudnn.tgz"
+#wget "https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.6.2.24/prod/10.1_20190719/cudnn-10.1-linux-x64-v7.6.2.24.tgz" -O "cudnn.tgz"
+wget "/home/jai/Downloads/cudnn-10.1-linux-x64-v7.6.2.24.tgz" -O 'cudnn.tgz"
+
+
 tar -zxf cudnn.tgz
 cd cuda
 sudo cp lib64/* /usr/local/cuda/lib64/
