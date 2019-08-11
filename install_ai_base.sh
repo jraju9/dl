@@ -82,6 +82,54 @@ git clone https://github.com/fastai/courses.git
 echo "\"jupyter notebook\" will start Jupyter on port 8888"
 echo "If you get an error instead, try restarting your session so your $PATH is updated"
 
+#https://hub.docker.com/r/tensorflow/tensorflow/
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+    
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo apt-key fingerprint 0EBFCD88
+
+# pub   rsa4096 2017-02-22 [SCEA]
+#      9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+# uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
+# sub   rsa4096 2017-02-22 [S]
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+   
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+apt-cache madison docker-ce
+# docker-ce | 5:18.09.1~3-0~ubuntu-xenial | https://download.docker.com/linux/ubuntu  xenial/stable amd64 Packages
+# docker-ce | 5:18.09.0~3-0~ubuntu-xenial | https://download.docker.com/linux/ubuntu  xenial/stable amd64 Packages
+# docker-ce | 18.06.1~ce~3-0~ubuntu       | https://download.docker.com/linux/ubuntu  xenial/stable amd64 Packages
+#  docker-ce | 18.06.0~ce~3-0~ubuntu       | https://download.docker.com/linux/ubuntu  xenial/stable amd64 Packages
+#  ...
+
+sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io
+
+sudo docker run hello-world
+
+# If you would like to use Docker as a non-root user, 
+# you should now consider adding your user to the “docker” group with something like:
+
+sudo usermod -a -G docker $USER
+
+docker run -it --rm -v $(realpath ~/notebooks):/tf/notebooks -p 8888:8888 tensorflow/tensorflow:latest-py3-jupyter
+
+
+
+
 
 
 
