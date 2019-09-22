@@ -129,7 +129,8 @@ docker run -it --rm -v $(realpath ~/notebooks):/tf/notebooks -p 8888:8888 tensor
 
 
 
-
+# Install tensorflow datasets
+pip install -q tensorflow-datasets
 
 
 
