@@ -30,3 +30,10 @@ sudo apt-get install texlive
 
 # install virtenv
 sudo apt install virtualenv
+
+
+# change sound default
+sudo apt-get install pavucontrol
+
+#To open pavucontrol from the Terminal:
+pavucontrol
