@@ -54,3 +54,6 @@ fmpeg -version
 
 ffmpeg -encoders
 ffmpeg -decoders
+
+# Install python package
+conda install -c conda-forge ffmpeg
